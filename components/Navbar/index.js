@@ -152,8 +152,8 @@ export function ResponsiveNavbar({ activePage, pageName = "" }) {
         </li>
 
         <li
-          className={active === "about" ? `active` : `li`}
-          data-name="about"
+          className={active === "blog" ? `active` : `li`}
+          data-name="blog"
           onClick={handleActive}
         >
           <Link href="https://whereisfarukk.github.io/blog/">
