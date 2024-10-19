@@ -150,6 +150,18 @@ export function ResponsiveNavbar({ activePage, pageName = "" }) {
           </Link>
           <label className={`label`}>About</label>
         </li>
+
+        <li
+          className={active === "about" ? `active` : `li`}
+          data-name="about"
+          onClick={handleActive}
+        >
+          <Link href="https://whereisfarukk.github.io/blog/">
+            <ion-icon name="globe-outline" class={`icon`}></ion-icon>
+          </Link>
+          <label className={`label`}>Blog</label>
+        </li>
+
         <li
           className={active === "contact" ? `active mr-5` : `li mr-5`}
           data-name="contact"
