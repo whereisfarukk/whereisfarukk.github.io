@@ -5,7 +5,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import usersInfo from "../../data/usersInfo.json";
 import { socials } from "../../data/socials.json";
-import avatar from "../../public/images/avatar/avatar.png";
+import avatar from "../../public/images/avatar/avatar.webp";
 
 function NavBar() {
   return (
