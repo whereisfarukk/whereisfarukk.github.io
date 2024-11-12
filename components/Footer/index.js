@@ -25,9 +25,9 @@ function Footer() {
           </div>
           <div className="right">
             <div className="socials flex flex-row items-center justify-center">
-              {socials["twitter"] !== "" && (
+              {/* {socials["twitter"] !== "" && (
                 <SocialLink url={socials["twitter"]} children={<FaTwitter />} />
-              )}
+              )} */}
 
               {socials["github"] !== "" && (
                 <SocialLink url={socials["github"]} children={<FaGithub />} />

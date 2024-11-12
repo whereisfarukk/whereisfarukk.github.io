@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import usersInfo from "../../data/usersInfo.json";
 import { socials } from "../../data/socials.json";
@@ -53,7 +53,7 @@ function NavBar() {
           <ul
             className={`flex flex-row align-center justify-between items-center`}
           >
-            {socials["twitter"] !== "" && (
+            {/* {socials["twitter"] !== "" && (
               <a
                 href={socials["twitter"]}
                 target="_blank"
@@ -62,7 +62,7 @@ function NavBar() {
                 <FaTwitter className={`mr-[10px] `} />
                 <small>Twitter</small>
               </a>
-            )}
+            )} */}
 
             {socials["github"] !== "" && (
               <a
@@ -82,6 +82,16 @@ function NavBar() {
               >
                 <FiMail className={`mr-[10px] icon mail`} />
                 <small>Email</small>
+              </a>
+            )}
+            {socials["linkedin"] !== "" && (
+              <a
+                href={socials["linkedin"]}
+                target="_blank"
+                className={`w-[100px] text-[17px] flex flex-row align-center justify-center items-center decoration-none hover:text-white`}
+              >
+                <FaLinkedin className={`mr-[10px]`} />
+                <small>LinkedIn</small>
               </a>
             )}
           </ul>
