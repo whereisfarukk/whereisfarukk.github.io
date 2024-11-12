@@ -1,26 +1,26 @@
 {
   "projects": [
     {
-      "title": "E-Commerce Platform",
-      "imageUrl": "/images/projects/ecommerce.png",
-      "project_url": "https://example.com/ecommerce",
-      "description": "A full-featured e-commerce platform with user authentication, product management, and order processing.",
-      "tags": ["React", "Node.js", "PostgreSQL", "TailwindCSS"]
+      "title": "Online Hall allocation",
+      "imageUrl": "/images/project_images/hall_management.png",
+      "project_url": "https://github.com/whereisfarukk/Project-350",
+      "description": "A full-featured hall allocation platform with user authentication, provost , and application processing.",
+      "tags": ["HTML", "CSS", "JavaScript", "Node.js", "SQL"]
     },
 
     {
-      "title": "Some dummy title",
-      "imageUrl": "",
-      "project_url": "",
-      "description": "some basi project description",
-      "tags": ["react", "postgresql", "nodejs"]
+      "title": "PortFolio",
+      "imageUrl": "/images/project_images/portfolio.png",
+      "project_url": "https://github.com/whereisfarukk/whereisfarukk.github.io",
+      "description": "My lastest portfolio",
+      "tags": ["NextJs", "JavaScript"]
     },
     {
-      "title": "Some dummy title",
-      "imageUrl": "",
-      "project_url": "",
-      "description": "some basi project description",
-      "tags": ["react", "postgresql", "nodejs"]
+      "title": "Pacman",
+      "imageUrl": "/images/project_images/pacman.jpg",
+      "project_url": "https://github.com/whereisfarukk/Pacman",
+      "description": "A java and OOP based game project",
+      "tags": ["Java", "JavaFx", "OOP"]
     }
   ]
 }

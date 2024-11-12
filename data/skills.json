@@ -1,1 +1,19 @@
-{"skill":[{"name":"backend ","description":"nothing","projects_completed":"10"},{"name":"cloud engineering","description":"hhbvdgfvd","projects_completed":"10"},{"name":"database administration","description":"sdfnsdsnkvsdkvl","projects_completed":"10"}]}
+{
+  "skill": [
+    {
+      "name": "Language ",
+      "description": "C , C++ , Java , JavaScript , HTML/CSS",
+      "projects_completed": "10"
+    },
+    {
+      "name": "Frame Work",
+      "description": "Nodejs , ExpressJs",
+      "projects_completed": "10"
+    },
+    {
+      "name": "Tools",
+      "description": "Git , Github , Vim , Latex , Matlab , Android , Linux , Unity , JUnit",
+      "projects_completed": "10"
+    }
+  ]
+}
