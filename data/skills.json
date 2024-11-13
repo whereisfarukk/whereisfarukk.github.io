@@ -2,17 +2,17 @@
   "skill": [
     {
       "name": "Language ",
-      "description": "C , C++ , Java , JavaScript , HTML/CSS",
+      "description": "C,C++,Java,JavaScript,HTML,CSS,MySql",
       "projects_completed": "10"
     },
     {
       "name": "Frame Work",
-      "description": "Nodejs , ExpressJs",
+      "description": "Nodejs,ExpressJs",
       "projects_completed": "10"
     },
     {
       "name": "Tools",
-      "description": "Git , Github , Vim , Latex , Matlab , Android , Linux , Unity , JUnit",
+      "description": "Git,Github,Vim,Latex,Matlab,Android,Linux,Unity,JUnit",
       "projects_completed": "10"
     }
   ]
