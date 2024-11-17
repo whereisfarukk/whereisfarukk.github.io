@@ -9,6 +9,9 @@ import {
   faSchool,
   faGraduationCap,
   faBriefcase,
+  faChessKnight,
+  faMedal,
+  faSquareRootAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 import userInfo from "../data/usersInfo.json";
@@ -105,15 +108,16 @@ function About() {
             >
               Timeline
             </h1>
+
             <div className="relative pl-8 sm:pl-32 py-6 group">
               {/* <span class="relative -ml-px  text-2xl bg-white dark:bg-[#111010] rounded-full -left-10 top-8">
                 🐜
               </span> */}
               <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-200 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-10 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-8 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                <div className="w-full pt-1.5 pb-1.5 text-sm leading-5">
-                  <h3>Software engineer</h3>
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5">
+                  <h3>Software Engineer</h3>
                 </div>
-                <time className="w-full pt-1.5 pb-1.5 text-sm leading-5 text-right">
+                <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-5 text-right">
                   October 2020 — July 2022
                 </time>
               </div>
@@ -198,7 +202,7 @@ function About() {
                 </div>
 
                 {/* Text */}
-                <div className="w-full pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
                   <h3>
                     Intern as software enginner at{" "}
                     <a
@@ -211,7 +215,7 @@ function About() {
                     </a>
                   </h3>
                 </div>
-                <time className="w-full pt-1.5 pb-1.5 text-sm leading-5 text-right">
+                <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-5 text-right">
                   July 2017 — April 2019
                 </time>
               </div>
@@ -227,7 +231,7 @@ function About() {
                 </div>
 
                 {/* Text */}
-                <div className="w-full pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
                   <h3>
                     Software Engineering at{" "}
                     <a
@@ -240,7 +244,7 @@ function About() {
                     </a>
                   </h3>
                 </div>
-                <time className="w-full pt-1.5 pb-1.5 text-sm leading-5 text-right">
+                <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-5 text-right">
                   Febryary 2020 — January 2024
                 </time>
               </div>
@@ -256,7 +260,7 @@ function About() {
                 </div>
 
                 {/* Text */}
-                <div className="w-full pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
                   <h3>
                     Started College at{" "}
                     <a
@@ -269,13 +273,43 @@ function About() {
                     </a>
                   </h3>
                 </div>
-                <time className="w-full pt-1.5 pb-1.5 text-sm leading-5 text-right">
+                <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-5 text-right">
                   July 2017 — April 2019
                 </time>
               </div>
             </div>
+
             <div class="relative pl-8 sm:pl-32 py-5 group">
               <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                {/* Cake Icon with rounded border and pink background */}
+                <div className="absolute  sm:left-0  bg-orange-100 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
+                  <FontAwesomeIcon
+                    icon={faSquareRootAlt}
+                    className="w-4 h-4 text-black"
+                  />
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
+                  <h3>
+                    Started Participating at{" "}
+                    <a
+                      href=""
+                      className="text-pink-500 no-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Math Olympiad
+                    </a>
+                  </h3>
+                </div>
+                <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-5 text-right">
+                  January 2013 — January 2018
+                </time>
+              </div>
+            </div>
+            <div class="relative pl-8 sm:pl-32 py-5 group">
+              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-6 before:mt-8 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-2 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Cake Icon with rounded border and pink background */}
                 <div className="absolute  sm:left-0  bg-yellow-500 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
                   <FontAwesomeIcon
@@ -285,7 +319,7 @@ function About() {
                 </div>
 
                 {/* Text */}
-                <div className="w-full pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
                   <h3>
                     Started High School at{" "}
                     <a
@@ -299,12 +333,43 @@ function About() {
                   </h3>
                 </div>
 
-                <time className="w-full pt-1.5 pb-1.5 text-sm leading-6 text-right">
+                <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-6 text-right">
                   Febryary 2012 — March 2017
                 </time>
               </div>
             </div>
-            <div className="relative pl-8 sm:pl-32 py-2 group">
+
+            <div class="relative pl-8 sm:pl-32 py-3 group">
+              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-8 before:mt-6 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-4 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                {/* Cake Icon with rounded border and pink background */}
+                <div className="absolute  sm:left-0  bg-crimson-400 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
+                  <FontAwesomeIcon
+                    icon={faMedal}
+                    className="w-4 h-4 text-black"
+                  />
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5 flex items-center">
+                  <h3>
+                    Got 3X National Talentful{" "}
+                    <a
+                      href=""
+                      className="text-pink-500 no-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Scholarship
+                    </a>
+                  </h3>
+                </div>
+                <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-5 text-right">
+                  December 2011
+                </time>
+              </div>
+            </div>
+
+            <div className="relative pl-8 sm:pl-32 py-8 group">
               <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Cake Icon with rounded border and pink background */}
                 <div className="absolute  sm:left-0  bg-pink-500 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
