@@ -109,12 +109,12 @@ function About() {
               Timeline
             </h1>
 
-            <div className="relative pl-8 sm:pl-32 py-6 group">
+            <div className="relative pl-8 sm:pl-32 py-5 group">
               {/* <span class="relative -ml-px  text-2xl bg-white dark:bg-[#111010] rounded-full -left-10 top-8">
                 🐜
               </span> */}
-              <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-200 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-10 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-8 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5">
+              <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute  before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-1 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-8 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                <div className="flex-1 w-3/5 pt-1.5 pb-1.5 text-sm leading-5 ">
                   <h3>Software Engineer</h3>
                 </div>
                 <time className="w-2/5 pt-1.5 pb-1.5 text-sm leading-5 text-right">
@@ -192,9 +192,9 @@ function About() {
             </div>
 
             <div className="relative pl-8 sm:pl-32 py-5 group">
-              <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Graduation Cap Icon with rounded border and yellow background */}
-                <div className="absolute sm:left-0 bg-gray-500 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
+                <div className="absolute sm:left-0 bg-gray-400 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.9 p-2">
                   <FontAwesomeIcon
                     icon={faBriefcase}
                     className="w-4 h-4 text-black"
@@ -221,9 +221,9 @@ function About() {
               </div>
             </div>
             <div className="relative pl-8 sm:pl-32 py-5 group">
-              <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Graduation Cap Icon with rounded border and yellow background */}
-                <div className="absolute sm:left-0 bg-blue-500 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
+                <div className="absolute sm:left-0 bg-blue-900 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
                   <FontAwesomeIcon
                     icon={faGraduationCap}
                     className="w-4 h-4 text-black"
@@ -250,7 +250,7 @@ function About() {
               </div>
             </div>
             <div class="relative pl-8 sm:pl-32 py-5 group">
-              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Cake Icon with rounded border and pink background */}
                 <div className="absolute  sm:left-0  bg-yellow-500 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
                   <FontAwesomeIcon
@@ -280,7 +280,7 @@ function About() {
             </div>
 
             <div class="relative pl-8 sm:pl-32 py-5 group">
-              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-7 before:mt-7 before:mb-4 before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Cake Icon with rounded border and pink background */}
                 <div className="absolute  sm:left-0  bg-orange-100 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
                   <FontAwesomeIcon
@@ -309,9 +309,9 @@ function About() {
               </div>
             </div>
             <div class="relative pl-8 sm:pl-32 py-5 group">
-              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-6 before:mt-8 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-2 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-6 before:mt-8 before:mb-4 before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-2 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Cake Icon with rounded border and pink background */}
-                <div className="absolute  sm:left-0  bg-yellow-500 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
+                <div className="absolute  sm:left-0  bg-yellow-400 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
                   <FontAwesomeIcon
                     icon={faSchool}
                     className="w-4 h-4 text-black"
@@ -340,7 +340,7 @@ function About() {
             </div>
 
             <div class="relative pl-8 sm:pl-32 py-3 group">
-              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-8 before:mt-6 before:mb-4 before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-4 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-8 before:mt-6 before:mb-4 before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-4 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Cake Icon with rounded border and pink background */}
                 <div className="absolute  sm:left-0  bg-crimson-400 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
                   <FontAwesomeIcon
@@ -370,9 +370,9 @@ function About() {
             </div>
 
             <div className="relative pl-8 sm:pl-32 py-8 group">
-              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-grey-100 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2  after:border-0 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                 {/* Cake Icon with rounded border and pink background */}
-                <div className="absolute  sm:left-0  bg-pink-500 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
+                <div className="absolute  sm:left-0  bg-pink-400 rounded-full flex justify-center items-center sm:ml-[6.5rem] -translate-x-1/2 translate-y-0.8 p-2">
                   <FaBirthdayCake className="w-4 h-4 text-black" />
                 </div>
 
