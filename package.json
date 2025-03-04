@@ -23,6 +23,7 @@
     "gradient-string": "^2.0.1",
     "inquirer": "^8.2.4",
     "lodash": "^4.17.21",
+    "motion": "^12.4.10",
     "next": "^12.1.5",
     "next-mdx-remote": "^5.0.0",
     "notyf": "^3.10.0",
