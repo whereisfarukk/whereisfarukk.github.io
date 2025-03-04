@@ -47,9 +47,9 @@ const ReadMore = ({ children }) => {
         </Markdown>
       </div>
       {shouldCover && !isOpen && (
-        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white dark:from-dark-100 flex justify-center items-end">
+        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white dark:from-dark-100 flex justify-center items-end pl-4">
           <button
-            className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
+            className="text-primary-600 hover:text-primary-700 dark:text-[12px] w-full text-start dark:hover:text-primary-300 font-bold"
             onClick={() => setOpen(!isOpen)}
           >
             Read more
@@ -64,7 +64,7 @@ const TimelineItem = ({ item }) => {
   return (
     <article className="relative mb-2 pb-6 last:mb-0 last:pb-0 after:absolute after:bottom-0 after:left-[15px] after:top-10 after:block after:w-[2px] after:bg-gray-200 dark:after:bg-gray-700 last:after:bg-transparent">
       {/* Row Layout */}
-      <div className="flex items-start">
+      <div className={`flex  ${item.description ? "" : "items-center"} `}>
         {/* Icon */}
         <div className="relative flex items-center justify-center w-8 h-8">
           <div
@@ -84,7 +84,7 @@ const TimelineItem = ({ item }) => {
         </div>
 
         {/* Title and Date */}
-        <div className="flex-grow ml-4">
+        <div className={`flex-grow ml-4 ${item.description ? "mt-[6px]" : ""}`}>
           <div className="flex justify-between items-center">
             <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">
               {/* Render Markdown Links */}
