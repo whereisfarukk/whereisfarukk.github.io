@@ -2,6 +2,9 @@ module.exports = {
   content: [
     "./pages/**/*.{html,js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -31,7 +34,7 @@ module.exports = {
         },
         blue: {
           200: "#4898f0",
-          400: "#503cef",
+          400: "#60a5fa",
           600: "#513cef",
           800: "#140e32",
           900: "#60A5FA",
@@ -47,6 +50,10 @@ module.exports = {
         },
         grey: {
           100: "#71797E",
+        },
+        pink: {
+          100: "rgb(246 165 192)",
+          300: "rgb(239 98 145 )",
         },
       },
     },
