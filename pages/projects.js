@@ -6,13 +6,87 @@ import { ResponsiveNavbar } from "../components/Navbar";
 import { FaStar, FaArrowRight, FaQuoteRight } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
-import { projects } from "../data/projects.json";
+import projects from "../data/projects.json";
 import userInfo from "../data/usersInfo.json";
 import { ExternalLinkIcon } from "../components/assets/ExternalLinkIcon";
 import { StarIcon } from "../components/assets/StarIcon";
 
 function Projects() {
   const [windowWidth, setWindowWidth] = useState(0);
+  // const projects = [
+  //   {
+  //     projectName: "Portfolio",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["React", "JavaScript", "CSS"],
+  //     githubLink: "https://github.com/whereisfarukk/whereisfarukk.github.io",
+  //     imgSrc: "\\images\\project_images\\portfolio.png",
+  //   },
+  //   {
+  //     projectName: "Pacman",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["Java", "JavaFx", "OOP"],
+  //     githubLink: "https://github.com/whereisfarukk/Pacman",
+  //     imgSrc: "\\images\\project_images\\pacman.jpg",
+  //   },
+  //   {
+  //     projectName: "Project-350",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["HTML", "CSS", "JavaScript", "NodeJs", "MySql"],
+  //     githubLink: "https://github.com/whereisfarukk/Project-350",
+  //     imgSrc: "\\images\\project_images\\hall_management.png",
+  //   },
+  //   {
+  //     projectName: "Project-250",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["Java", "JavaFx", "OOP"],
+  //     githubLink: "https://github.com/whereisfarukk/Moon-Expediton",
+  //     imgSrc: "\\images\\project_images\\moon-expedition.gif",
+  //   },
+  //   {
+  //     projectName: "Chrome Dino Game",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["C#", "Unity"],
+  //     githubLink: "https://github.com/whereisfarukk/Dino-Game",
+  //     imgSrc: "\\images\\project_images\\Dino_Game.gif",
+  //   },
+  //   {
+  //     projectName: "Chat With Pdfs",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["Python", "LangChain", "OpenAI"],
+  //     githubLink: "https://github.com/whereisfarukk/ChatWithPdf",
+  //     imgSrc: "\\images\\project_images\\chatwithmultiplepdf.png",
+  //   },
+  //   {
+  //     projectName: "Food Engine",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["Android", "Java"],
+  //     githubLink: "https://github.com/whereisfarukk/Food_Engine",
+  //     imgSrc: "\\images\\project_images\\train-food.jpeg",
+  //   },
+  //   {
+  //     projectName: "Pong & DX ball",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["C++", "iGraphics"],
+  //     githubLink: "https://github.com/whereisfarukk/Pong_Dx",
+  //     imgSrc: "\\images\\project_images\\pong.gif",
+  //   },
+  //   {
+  //     projectName: "Todo app",
+  //     projectDesc:
+  //       "This is a brief description of the sample project that demonstrates the features and functionality.",
+  //     technologyUsed: ["HTML", "CSS", "JavaScript", "Nodejs", "MySql"],
+  //     githubLink: "https://github.com/whereisfarukk/Pong_Dx",
+  //     imgSrc: "\\images\\project_images\\todo.png",
+  //   },
+  // ];
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -146,447 +220,62 @@ export default Projects;
 //         </>
 //     )
 // }
-function ProjectsCard({ projects }) {
+function ProjectsCard({}) {
   return (
     <div className="max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {/* Card 1 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/whereisfarukk.github.io"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\portfolio.png"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Portfolio
-              </h3>
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
-            </div>
-          </div>
-          <p
-            className="text-fun-gray text-left text-sm"
-            style={{
-              fontSize: ".875rem",
-              lineHeight: "1.25rem",
-            }}
+      {projects.map((project, index) => (
+        <div key={index} className="max-w-sm mx-auto flex flex-col">
+          <a
+            href={project.project_url}
+            target="_blank"
+            className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
           >
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["React", "JavaScript", "CSS"].map((tag, index) => (
-              <li key={index}>
-                <Link href={`/projects/tag/${tag}`}>
-                  <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Card 2 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/Pacman"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\pacman.jpg"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Pacman
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
+            <div className="imgCont h-56 overflow-hidden">
+              <img
+                className="w-full h-full object-cover rounded-md"
+                src={project.imageUrl}
+                alt={`${project.title} Project`}
+              />
             </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["Java", "JavaFx", "OOP"].map((tag, index) => (
-              <li key={index}>
-                <Link href={`/projects/tag/${tag}`}>
-                  <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Card 3 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/Project-350"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\hall_management.png"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Project-350
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
+          </a>
+          <div className="w-full mt-5">
+            <div className="flex projects-center justify-between">
+              <a href="#" target="_blank">
+                <h3
+                  className="text-lg font-bold"
+                  style={{ fontFamily: "Consolas, monospace" }}
+                >
+                  {project.title}
+                </h3>
+              </a>
+              <div className="space-x-2">
+                <a href="#" target="_blank" rel="noreferrer"></a>
+                <a href="#" target="_blank" rel="noreferrer"></a>
+              </div>
             </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["HTML", "CSS", "JavaScript", "NodeJs", "MySql"].map(
-              (tag, index) => (
-                <li key={index}>
+            <p
+              className="text-fun-gray text-left text-sm"
+              style={{
+                fontSize: ".875rem",
+                lineHeight: "1.25rem",
+              }}
+            >
+              {project.description}
+            </p>
+            <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
+              {project.tags.map((tag, idx) => (
+                <li key={idx}>
                   <Link href={`/projects/tag/${tag}`}>
                     <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
                       {tag}
                     </div>
                   </Link>
                 </li>
-              )
-            )}
-          </ul>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-
-      {/* Card 4 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/Moon-Expediton"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\moon-expedition.gif"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Project-250
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
-            </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["Java", "JavaFx", "OOP"].map((tag, index) => (
-              <li key={index}>
-                <Link href={`/projects/tag/${tag}`}>
-                  <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Card 5 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/Dino-Game"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\Dino_Game.gif"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Chrome Dino Game
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
-            </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["C#", "Unity"].map((tag, index) => (
-              <li key={index}>
-                <Link href={`/projects/tag/${tag}`}>
-                  <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Card 6 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/ChatWithPdf"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\chatwithmultiplepdf.png"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Chat With Pdfs
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
-            </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["Python", "LangChain", "OpenAI"].map((tag, index) => (
-              <li key={index}>
-                <Link href={`/projects/tag/${tag}`}>
-                  <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      {/* Card 7 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/Food_Engine"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\train-food.jpeg"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Food Engine
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
-            </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["Android", "Java"].map((tag, index) => (
-              <li key={index}>
-                <Link href={`/projects/tag/${tag}`}>
-                  <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      {/* Card 8 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/Pong_Dx"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\pong.gif"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Pong & DX ball
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
-            </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["C++", "iGraphics"].map((tag, index) => (
-              <li key={index}>
-                <Link href={`/projects/tag/${tag}`}>
-                  <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      {/* Card 9 */}
-      <div className="max-w-sm mx-auto flex flex-col">
-        <a
-          href="https://github.com/whereisfarukk/Pong_Dx"
-          target="_blank"
-          className="w-full relative rounded-xl border-fun-gray border p-2 transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:opacity-75"
-        >
-          <div className="imgCont h-56 overflow-hidden">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src="\images\project_images\todo.png"
-              alt="Sample Project"
-            />
-          </div>
-        </a>
-        <div className="w-full mt-5">
-          <div className="flex projects-center justify-between">
-            <a href="#" target="_blank">
-              <h3
-                className="text-lg font-bold"
-                style={{ fontFamily: "Consolas, monospace" }}
-              >
-                Todo app
-              </h3>{" "}
-            </a>
-            <div className="space-x-2">
-              <a href="#" target="_blank" rel="noreferrer"></a>
-              <a href="#" target="_blank" rel="noreferrer"></a>
-            </div>
-          </div>
-          <p className="text-fun-gray text-left text-sm">
-            This is a brief description of the sample project that demonstrates
-            the features and functionality.
-          </p>
-          <ul className="flex flex-wrap items-center mt-2 ml-0 justify-start list-none">
-            {["HTML", "CSS", "JavaScript", "Nodejs", "MySql"].map(
-              (tag, index) => (
-                <li key={index}>
-                  <Link href={`/projects/tag/${tag}`}>
-                    <div className="m-1 rounded-lg text-sm bg-gray-800 text-white py-1 px-2 cursor-pointer hover:opacity-75">
-                      {tag}
-                    </div>
-                  </Link>
-                </li>
-              )
-            )}
-          </ul>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

@@ -1,26 +1,65 @@
-{
-  "projects": [
-    {
-      "title": "Online Hall allocation",
-      "imageUrl": "/images/project_images/hall_management.png",
-      "project_url": "https://github.com/whereisfarukk/Project-350",
-      "description": "A full-featured hall allocation platform with user authentication, provost , and application processing.",
-      "tags": ["HTML", "CSS", "JavaScript", "Node.js", "SQL"]
-    },
-
-    {
-      "title": "PortFolio",
-      "imageUrl": "/images/project_images/portfolio.png",
-      "project_url": "https://github.com/whereisfarukk/whereisfarukk.github.io",
-      "description": "My lastest portfolio",
-      "tags": ["NextJs", "JavaScript"]
-    },
-    {
-      "title": "Pacman",
-      "imageUrl": "/images/project_images/pacman.jpg",
-      "project_url": "https://github.com/whereisfarukk/Pacman",
-      "description": "A java and OOP based game project",
-      "tags": ["Java", "JavaFx", "OOP"]
-    }
-  ]
-}
+[
+  {
+    "title": "Portfolio",
+    "imageUrl": "/images/project_images/portfolio.png",
+    "project_url": "https://github.com/whereisfarukk/whereisfarukk.github.io",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["React", "JavaScript", "CSS"]
+  },
+  {
+    "title": "Pacman",
+    "imageUrl": "/images/project_images/pacman.jpg",
+    "project_url": "https://github.com/whereisfarukk/Pacman",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["Java", "JavaFx", "OOP"]
+  },
+  {
+    "title": "Project-350",
+    "imageUrl": "/images/project_images/hall_management.png",
+    "project_url": "https://github.com/whereisfarukk/Project-350",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["HTML", "CSS", "JavaScript", "NodeJs", "MySql"]
+  },
+  {
+    "title": "Project-250",
+    "imageUrl": "/images/project_images/moon-expedition.gif",
+    "project_url": "https://github.com/whereisfarukk/Moon-Expediton",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["Java", "JavaFx", "OOP"]
+  },
+  {
+    "title": "Chrome Dino Game",
+    "imageUrl": "/images/project_images/Dino_Game.gif",
+    "project_url": "https://github.com/whereisfarukk/Dino-Game",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["C#", "Unity"]
+  },
+  {
+    "title": "Chat With Pdfs",
+    "imageUrl": "/images/project_images/chatwithmultiplepdf.png",
+    "project_url": "https://github.com/whereisfarukk/ChatWithPdf",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["Python", "LangChain", "OpenAI"]
+  },
+  {
+    "title": "Food Engine",
+    "imageUrl": "/images/project_images/train-food.jpeg",
+    "project_url": "https://github.com/whereisfarukk/Food_Engine",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["Android", "Java"]
+  },
+  {
+    "title": "Pong & DX ball",
+    "imageUrl": "/images/project_images/pong.gif",
+    "project_url": "https://github.com/whereisfarukk/Pong_Dx",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["C++", "iGraphics"]
+  },
+  {
+    "title": "Todo app",
+    "imageUrl": "/images/project_images/todo.png",
+    "project_url": "https://github.com/whereisfarukk/Pong_Dx",
+    "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+    "tags": ["HTML", "CSS", "JavaScript", "Nodejs", "MySql"]
+  }
+]

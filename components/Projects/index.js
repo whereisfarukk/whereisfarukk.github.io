@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaStar, FaArrowRight, FaQuoteRight } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
-import { projects } from "../../data/projects.json";
+import projects from "../../data/projects.json";
 import userInfo from "../../data/usersInfo.json";
 
 function Projects() {
