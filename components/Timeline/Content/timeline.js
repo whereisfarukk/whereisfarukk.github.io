@@ -15,14 +15,15 @@ export const timeline = [
     title: "Intern Software Engineer at [Technext](https://technext.it/)",
     tags: ["Nextjs", "React.js"],
     description: `
-    * Built a microservice architecture (interaction map of microservices and services in Miro)
-    * Organized transition from the monolith into microservices (Laravel PHP => PHP, Node / TS, Golang)
-    * Implemented API Gateway and GraphQL (Amazon API Gateway & Apollo/Yoga GraphQL)
-    * Implemented asynchronous architecture (RabbitMQ)
-    * Advised microfrontends (Webpack Federation & React)
-    * Optimized and decomposed the database structure for more optimal and faster queries
-    * Introduced the practice of cross-review
-    * Organized an internal library of dependencies and packages (Composer & NPM)`,
+    * Built responsive, scalable web apps using React.js , Next.js , 
+      and CSS frameworks, ensuring clean, modular, and maintainable code
+    * Optimized performance with SSR, lazy loading, and code splitting in 
+      Next.js , while integrating RESTful APIs
+    * Conducted unit tests with Jest and E2E tests with Cypress , identified 
+      bugs, and ensured high-quality, bug-free applications through rigorous testing.
+    * Worked in Agile teams using Git , participated in code reviews, and collaborated 
+      with clients to align deliverables with project requirements.
+    `,
     duration: {
       start: "December 2024",
       end: "Now",
