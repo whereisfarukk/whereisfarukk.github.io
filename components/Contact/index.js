@@ -21,7 +21,16 @@ function Contact() {
       <Container>
         <div className="w-full h-auto flex flex-col items-start justify-start py-[50px] mb-[20px] md:py-5 ">
           <h1 data-aos="fade-right" className="text-[30px] font-thin ">
-            Let Make The Impossible{" "}
+            Let Make The{" "}
+            <span className="relative group  font-bold  cursor-text">
+              Impossible
+              {/* GIF on hover */}
+              <img
+                src="/gifs/impossible.gif"
+                alt="Impossible GIF"
+                className="absolute -top-24 left-0 -translate-x-1/2 mt-0 w-40 hidden group-hover:block z-50"
+              />
+            </span>{" "}
             <span className="text-green-200 font-extrabold">Possible.</span>
           </h1>
           <br />
