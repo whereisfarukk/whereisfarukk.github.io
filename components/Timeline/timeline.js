@@ -9,8 +9,13 @@ const MyTimeline = () => {
     <div className="container mx-auto max-w-2xl my-14">
       <h2 className="relative text-3xl font-bold text-center mb-10 ">
         My{" "}
-        <span className="bg-gradient-to-br from-[rgba(76,255,180,0.3)] via-[rgba(76,255,180,0.9)] to-[rgba(76,255,180,0.3)] h-screen w-full bg-clip-text text-transparent">
+        <span className="relative group bg-gradient-to-br from-[rgba(76,255,180,0.3)] via-[rgba(76,255,180,0.9)] to-[rgba(76,255,180,0.3)] bg-clip-text text-transparent inline-block">
           Journey
+          <img
+            src="/gifs/explore.gif"
+            alt="Journey GIF"
+            className="absolute -top-24 left-1/2 -translate-x-1/2 w-30 h-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50"
+          />
         </span>
         <svg
           width="75"
