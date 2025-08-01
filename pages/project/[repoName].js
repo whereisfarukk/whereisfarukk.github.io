@@ -19,17 +19,19 @@ function SinglePage() {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const [data, setData] = useState([]);
     const [contributors, setContributors] = useState([]);
-    console.log(contributors);
+    // console.log(contributors);
     // console.log(repoName);
     useEffect(() => {
         const storedData = localStorage.getItem("user_repo");
         if (storedData) {
             const data = JSON.parse(storedData);
+            console.log(data);
             setData(data);
         }
     }, []);
-    // console.log(data);
     const project = data.find((p) => p.name === repoName);
+    // console.log(project);
+
     useEffect(() => {
         const fetchContributors = async () => {
             if (!project) return;

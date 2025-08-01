@@ -1,5 +1,13 @@
 [
     {
+        "title": "Flat Flow",
+        "imageUrl": "/images/project_images/flatflow.png",
+        "project_url": "https://github.com/whereisfarukk/FlatFlow",
+        "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+        "tags": ["React", "JavaScript", "tailwind"],
+        "repoName": "FlatFlow"
+    },
+    {
         "title": "Portfolio",
         "imageUrl": "/images/project_images/portfolio.png",
         "project_url": "https://github.com/whereisfarukk/whereisfarukk.github.io",
