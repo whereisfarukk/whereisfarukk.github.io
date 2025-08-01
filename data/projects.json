@@ -8,6 +8,14 @@
         "repoName": "FlatFlow"
     },
     {
+        "title": "Book Management",
+        "imageUrl": "/images/project_images/book-management.png",
+        "project_url": "https://github.com/whereisfarukk/Book-Management",
+        "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
+        "tags": ["React", "JavaScript", "tailwind"],
+        "repoName": "Book-Management"
+    },
+    {
         "title": "Portfolio",
         "imageUrl": "/images/project_images/portfolio.png",
         "project_url": "https://github.com/whereisfarukk/whereisfarukk.github.io",
