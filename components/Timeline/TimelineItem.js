@@ -34,12 +34,20 @@ const ReadMore = ({ children }) => {
               <ul className="list-disc pl-5 space-y-2 ">{children}</ul>
             ),
             li: ({ children }) => (
-              <li className="text-sm w-[75%]">{children}</li>
+              <li className="text-sm w-full break-words">{children}</li>
             ),
             p: ({ children }) => (
-              <p className="text-[13px] break-words subpixel-antialiased w-[75%]">
+              <p className="text-[13px] break-words subpixel-antialiased w-full">
                 {children}
               </p>
+            ),
+            pre: ({ children }) => (
+              <pre className="w-full whitespace-pre-wrap break-words text-[13px]">
+                {children}
+              </pre>
+            ),
+            code: ({ children }) => (
+              <code className="whitespace-pre-wrap break-words">{children}</code>
             ),
           }}
         >
@@ -84,9 +92,9 @@ const TimelineItem = ({ item }) => {
         </div>
 
         {/* Title and Date */}
-        <div className={`flex-grow ml-4 ${item.description ? "mt-[6px]" : ""}`}>
-          <div className="flex justify-between items-center">
-            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">
+        <div className={`flex-grow min-w-0 ml-4 ${item.description ? "mt-[6px]" : ""}`}>
+          <div className="flex flex-wrap justify-between items-center gap-x-3 gap-y-1">
+            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 break-words min-w-0">
               {/* Render Markdown Links */}
               <Markdown
                 components={{
@@ -105,7 +113,7 @@ const TimelineItem = ({ item }) => {
                 {item.title}
               </Markdown>
             </h3>
-            <span className="text-xs text-gray-500 dark:text-gray-400">
+            <span className="text-xs text-gray-500 dark:text-gray-400 flex-shrink-0">
               {item.duration.start}
               {item.duration.end && <> &mdash; {item.duration.end}</>}
             </span>
@@ -113,7 +121,7 @@ const TimelineItem = ({ item }) => {
 
           {/* Tags */}
           {item.tags && item.tags.length > 0 && (
-            <div className="mt-2 flex flex-row space-x-3">
+            <div className="mt-2 flex flex-row flex-wrap gap-2">
               {item.tags.map((tag, index) => (
                 <Tag key={`tag-${index}`}>{tag}</Tag>
               ))}

@@ -68,7 +68,11 @@ function About() {
                                     <br />
                                     {userInfo.bio_desc.length > 0
                                         ? userInfo.bio_desc.map((bio, i) => {
-                                              return <p className={`text-[14px] mb-5 text-white-200`}>{bio}</p>;
+                                              return (
+                                                  <p key={`bio-${i}`} className={`text-[14px] mb-5 text-white-200`}>
+                                                      {bio}
+                                                  </p>
+                                              );
                                           })
                                         : "Opps, 😬 looks like I dont have a bio."}
                                 </div>
