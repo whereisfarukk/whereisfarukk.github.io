@@ -21,8 +21,8 @@ export const timeline = [
     * Published npm packages for custom n8n packages for vlm run API’s.
     `,
         duration: {
-            start: "June 2025",
-            end: "July 2025",
+            start: "September 2025",
+            end: "Now",
         },
         icon: "heroicons-outline:briefcase",
         color: "gray",
