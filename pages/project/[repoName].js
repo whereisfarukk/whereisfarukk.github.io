@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Github, ExternalLink, Calendar, Users, Star, GitBranch, Eye, Download, ChevronLeft, Code2, Laptop, Smartphone, Database, Cloud, Shield, Volume2, Maximize, Pause, Play } from "lucide-react";
-import { Container, DomHead, Footer, NavBar } from "../../components";
+import { Container, DomHead, Footer, NavBar, ConcentricRing } from "../../components";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -62,7 +62,13 @@ function SinglePage() {
     }, [project]);
 
     if (error) return <p>{error}</p>;
-    if (!project) return <p>Loading...</p>;
+    if (!project)
+        return (
+            <div className="w-screen h-screen flex flex-col items-center justify-center gap-4 text-white-100">
+                <ConcentricRing className="w-10 h-10" />
+                <p className="text-white-300 text-sm">Loading project...</p>
+            </div>
+        );
     return (
         <>
             <DomHead pageName="Projects" />
