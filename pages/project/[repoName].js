@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Github, ExternalLink, Calendar, Users, Star, GitBranch, Eye, Download, ChevronLeft, Code2, Laptop, Smartphone, Database, Cloud, Shield, Volume2, Maximize, Pause, Play } from "lucide-react";
 import { Container, DomHead, Footer, NavBar } from "../../components";
 import Link from "next/link";
@@ -6,6 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 
 import { useRouter } from "next/router";
 import { ResponsiveNavbar } from "../../components/Navbar";
+import userInfo from "../../data/usersInfo.json";
 function SinglePage() {
     const [windowWidth, setWindowWidth] = useState(0);
     useEffect(() => {
@@ -17,20 +18,32 @@ function SinglePage() {
     const router = useRouter();
     const { repoName } = router.query;
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-    const [data, setData] = useState([]);
+    const [project, setProject] = useState(null);
+    const [error, setError] = useState(null);
     const [contributors, setContributors] = useState([]);
-    // console.log(contributors);
-    // console.log(repoName);
+
     useEffect(() => {
-        const storedData = localStorage.getItem("user_repo");
-        if (storedData) {
-            const data = JSON.parse(storedData);
-            console.log(data);
-            setData(data);
-        }
-    }, []);
-    const project = data.find((p) => p.name === repoName);
-    // console.log(project);
+        if (!repoName) return;
+
+        const fetchProject = async () => {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${userInfo.github_username}/${repoName}`);
+                const result = await response.json();
+
+                if (!response.ok || !result || !result.owner) {
+                    setError(result?.message || "This project couldn't be found.");
+                    return;
+                }
+
+                setProject(result);
+            } catch (err) {
+                console.error("Failed to fetch project", err);
+                setError("Failed to load this project. Please try again later.");
+            }
+        };
+
+        fetchProject();
+    }, [repoName]);
 
     useEffect(() => {
         const fetchContributors = async () => {
@@ -39,7 +52,7 @@ function SinglePage() {
             try {
                 const response = await fetch(`https://api.github.com/repos/${project.owner.login}/${project.name}/contributors`);
                 const contributors = await response.json();
-                setContributors(contributors);
+                setContributors(Array.isArray(contributors) ? contributors : []);
             } catch (error) {
                 console.error("Failed to fetch contributors", error);
             }
@@ -47,7 +60,8 @@ function SinglePage() {
 
         fetchContributors();
     }, [project]);
-    // console.log(project);
+
+    if (error) return <p>{error}</p>;
     if (!project) return <p>Loading...</p>;
     return (
         <>
