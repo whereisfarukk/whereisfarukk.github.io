@@ -308,44 +308,84 @@ body {
 
 /* Language scrolling */
 .scrolling-container {
-  margin-top: 0.5rem;
-  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  width: 90%;
+  width: 100%;
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    /* Fully transparent on the left */ rgba(0, 0, 0, 1) 15%,
-    /* Fully opaque after 15% */ rgba(0, 0, 0, 1) 85%,
-    /* Remain opaque until 85% */ rgba(0, 0, 0, 0)
+    /* Fully transparent on the left */ rgba(0, 0, 0, 1) 8%,
+    /* Fully opaque after 8% */ rgba(0, 0, 0, 1) 92%,
+    /* Remain opaque until 92% */ rgba(0, 0, 0, 0)
       /* Fade out to transparent on the right */
   );
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 0));
 }
 
 .scrolling-track {
   display: flex;
-  min-width: 100%;
-  animation: scroll-left 26s linear infinite;
+  width: max-content;
+  animation: scroll-left 22s linear infinite;
+}
+
+/* Pause the marquee so tags are easy to read on hover */
+.scrolling-container:hover .scrolling-track {
+  animation-play-state: paused;
 }
 
 .scrolling-card {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  padding: 3px 11px;
-  font-size: 13px;
+  gap: 6px;
+  padding: 5px 13px;
+  font-size: 12.5px;
   white-space: nowrap;
-  border: 1px solid #5a5974; /* Green border */
-  background-color: #202022;
-  border-radius: 5px; /* Rounded corners */
-  margin-right: 10px; /* Space between the cards */
+  border: 1px solid rgba(100, 244, 172, 0.16);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)), #1a1b1e;
+  border-radius: 999px; /* Pill shape */
+  margin-right: 8px; /* Space between the cards */
   font-weight: 500;
+  color: #ccc;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.scrolling-card:hover {
+  border-color: rgba(100, 244, 172, 0.55);
+  color: #fff;
+  background-color: #202022;
+  transform: translateY(-2px);
+}
+
+.scrolling-card-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.scrolling-card:hover .scrolling-card-icon {
+  opacity: 1;
 }
 
 @keyframes scroll-left {
   to {
-    transform: translateX(-100%);
+    /* The track renders two identical copies of the tags, so shifting
+       by exactly half its width loops seamlessly with no jump. */
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrolling-track {
+    animation: none;
   }
 }
 
