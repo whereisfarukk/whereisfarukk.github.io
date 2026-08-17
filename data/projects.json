@@ -3,24 +3,24 @@
         "title": "Flat Flow",
         "imageUrl": "/images/project_images/flatflow.png",
         "project_url": "https://github.com/whereisfarukk/FlatFlow",
-        "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
-        "tags": ["React", "JavaScript", "tailwind"],
+        "description": "A residential apartment complex management platform that replaces paper bills, spreadsheets, and WhatsApp complaints with a structured digital system for building finances, maintenance, and resident communication.",
+        "tags": ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
         "repoName": "FlatFlow"
     },
     {
         "title": "Book Management",
         "imageUrl": "/images/project_images/book-management.png",
         "project_url": "https://github.com/whereisfarukk/Book-Management",
-        "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
-        "tags": ["React", "JavaScript", "tailwind"],
+        "description": "A full-stack book management app for adding, updating, and deleting books with search, sort, and filter tools, secured with Firebase authentication.",
+        "tags": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
         "repoName": "Book-Management"
     },
     {
         "title": "Portfolio",
         "imageUrl": "/images/project_images/portfolio.png",
         "project_url": "https://github.com/whereisfarukk/whereisfarukk.github.io",
-        "description": "This is a brief description of the sample project that demonstrates the features and functionality.",
-        "tags": ["React", "JavaScript", "CSS"],
+        "description": "My personal developer portfolio, built with Next.js and Tailwind CSS to showcase my projects, skills, and experience.",
+        "tags": ["Next.js", "React", "Tailwind CSS"],
         "repoName": "whereisfarukk.github.io"
     },
     {
